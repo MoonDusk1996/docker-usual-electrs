@@ -7,9 +7,11 @@ ARG VERSION
 WORKDIR /build
 
 RUN apt-get update
-RUN apt-get install -y git clang cmake libsnappy-dev
+RUN apt-get install -y git clang cmake libsnappy-dev wget pgp
 
-RUN git clone --branch $VERSION https://github.com/romanz/electrs .
+RUN wget -O - https://romanzey.de/pgp.txt | gpg --import \
+  && git clone --branch $VERSION https://github.com/romanz/electrs . \
+  && git verify-tag $VERSION  
 
 # cargo under QEMU building for ARM can consumes 10s of GBs of RAM...
 # Solution: https://users.rust-lang.org/t/cargo-uses-too-much-memory-being-run-in-qemu/76531/2
@@ -19,9 +21,7 @@ RUN cargo install --locked --path .
 
 FROM debian:bullseye-slim
 
-RUN adduser --disabled-password --uid 1000 --home /data --gecos "" electrs
-USER electrs
-WORKDIR /data
+WORKDIR /electrs
 
 COPY --from=builder /usr/local/cargo/bin/electrs /bin/electrs
 
@@ -33,4 +33,6 @@ EXPOSE 4224
 
 STOPSIGNAL SIGINT
 
-ENTRYPOINT ["electrs"]
+VOLUME ["/electrs"]
+
+ENTRYPOINT ["electrs", "--conf", "electrs.conf"]
