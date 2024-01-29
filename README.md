@@ -3,7 +3,7 @@
 
 For less advanced users who want to have their electrum server quickly and easily using docker container.
 ## Runing
-Run: `curl -sSL https://raw.githubusercontent.com/MoonDusk1996/docker-electrs-server/master/quick_start.sh | bash`
+Run: `curl -sSL https://raw.githubusercontent.com/MoonDusk1996/docker-usual-electrs/master/quick_start.sh | bash`
 
 After finishing creating the docker image, check the configuration file at `/docker-usual-electrs/electrs_data` and upload your container by testing your configurations by running:
 
