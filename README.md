@@ -1,7 +1,6 @@
+# Docker usual electrs
+A fork of [docker-electrs](https://github.com/getumbrel/docker-electrs) that uses [electrs](https://github.com/romanz/electrs) to create a [Docker](https://www.docker.com/) container for an electrum server quickly and easily
 
-# Docker electrs server
-
-For less advanced users who want to have their electrum server quickly and easily using docker container.
 ## Runing
 Run: `curl -sSL https://raw.githubusercontent.com/MoonDusk1996/docker-usual-electrs/master/quick_start.sh | bash`
 
