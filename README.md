@@ -10,6 +10,6 @@ After finishing creating the docker image, check the configuration file at `/doc
 
 Once you are sure your settings are correct, you can run:
 
-`docker run -v <path_to_electrs_data>:/electrs -p 50001 -d electrs:latest`
+`docker run -v <path_to_electrs_data>:/electrs -p 127.0.0.1:50001:50001 -d --name electrum-server electrs:latest`
 
 You can add any directory to store the electrs database as long as you have an electrs.conf there.
