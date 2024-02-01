@@ -26,7 +26,7 @@ Execute:
 curl -sSL https://raw.githubusercontent.com/MoonDusk1996/docker-usual-electrs/master/quick_start.sh | bash
 ```
 
-Isso executará um script que irá baixar esse repositório e criará uma imagem docker do Electrs. Após terminar de criar a imagem edite o arquivo de configuração em `/docker-usual-electrs/electrs_data` (apontando para seu nó) e carregue seu contêiner testando suas configurações executando:
+Isso executará um script que irá baixar esse repositório e criará uma imagem docker do electrs. Após terminar de criar a imagem, edite o arquivo de configuração em `/docker-usual-electrs/electrs_data` (apontando para seu nó) e suba seu contêiner de testes executando:
 
 ```
 docker run --rm -v <caminho_para_electrs_data>:/electrs electrs:latest
