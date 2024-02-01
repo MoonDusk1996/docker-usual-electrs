@@ -23,19 +23,19 @@ Uma carteira Electrum geralmente se conecta a um servidor público vinculado a u
 ## Rodando
 Execute:
 ```
-curl -sSL https://raw.githubusercontent.com/MoonDusk1996/docker-usual-electrs/master/quick_start.sh | bash
+curl -sSL https://raw.githubusercontent.com/MoonDusk1996/docker_electrs/master/quick_start.sh | bash
 ```
 
-Isso executará um script que irá baixar esse repositório e criará uma imagem docker do electrs. Após terminar de criar a imagem, edite o arquivo de configuração em `/docker-usual-electrs/electrs_data` (apontando para seu nó) e suba seu contêiner de testes executando:
+Isso executará um script que irá baixar esse repositório e criará uma imagem docker do electrs. Após terminar de criar a imagem, edite o arquivo de configuração em `/docker_electrs/electrs_data` (apontando para seu nó) e suba seu contêiner de testes executando:
 
 ```
-docker run --rm -v <caminho_para_electrs_data>:/electrs electrs:latest
+docker run --rm -v <./caminho_para_electrs_data>:/electrs electrs:latest
 ```
 
 Depois de ter certeza de que suas configurações estão corretas, você pode parar de executar o container de testes com `Ctrl + c` e iniciar o container que ficará ativo de fato com:
 
 ```
-docker run -v <caminho_para_electrs_data>:/electrs -p 127.0.0.1:50001:50001 -d --restart=unless-stopped --name electrum-server electrs:latest
+docker run -v <./caminho_para_electrs_data>:/electrs -p 127.0.0.1:50001:50001 -d --restart=unless-stopped --name electrum-server electrs:latest
 ```
 Após isso seu contêiner estará em execução, mas pode levar algumas horas para ele sincronizar e indexar com seu nó de Bitcoin. Você pode ver o status do processo executando:
 
