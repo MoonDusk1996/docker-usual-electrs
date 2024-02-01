@@ -24,10 +24,10 @@ With your own electrum server connected to your own node, you become completely 
 ## Runing
 Run: 
 ```
-curl -sSL https://raw.githubusercontent.com/MoonDusk1996/docker-usual-electrs/master/quick_start.sh | bash
+curl -sSL https://raw.githubusercontent.com/MoonDusk1996/docker_electrs/master/quick_start.sh | bash
 ```
 
-After finishing creating the docker image, check the configuration file at `/docker-usual-electrs/electrs_data` and upload your container by testing your configurations by running:
+After finishing creating the docker image, check the configuration file at `/docker_electrs/electrs_data` and upload your container by testing your configurations by running:
 
 ```
 docker run --rm -v <path_to_electrs_data>:/electrs electrs:latest
