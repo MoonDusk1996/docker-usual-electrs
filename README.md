@@ -43,4 +43,4 @@ Após isso seu contêiner estará em execução, mas pode levar algumas horas pa
 docker logs -f electrum-server
 ```
 
-Nota: Você pode adicionar qualquer diretório para armazenar o banco de dados electrs, desde que tenha um electrs.conf lá.
+Nota: Você pode adicionar qualquer diretório para armazenar o banco de dados electrs, desde que tenha um `electrs.conf` lá.
