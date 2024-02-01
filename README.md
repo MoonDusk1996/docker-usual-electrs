@@ -1,5 +1,5 @@
 # Docker usual electrs
-The intuition of this repository is to make it possible for anyone to have their own [Electrum](https://github.com/spesmilo/electrum) server, using [Electrs](https://github.com/romanz/electrs) and [Docker](https://www.docker.com/) the easy way
+The intuition of this repository is to make it possible for anyone to have their own [Electrum](https://github.com/spesmilo/electrum) server, using [Electrs](https://github.com/romanz/electrs) and [Docker](https://www.docker.com/) the easy way.
 
 ## Quick introduction
 An Electrum wallet generally connects to a public server linked to a Bitcoin node to perform actions on the network.
