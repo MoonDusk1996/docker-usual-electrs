@@ -1,5 +1,14 @@
 # Docker usual electrs
-A fork of [docker-electrs](https://github.com/getumbrel/docker-electrs) that uses [electrs](https://github.com/romanz/electrs) to create a [Docker](https://www.docker.com/) container for an electrum server quickly and easily
+The intuition of this repository is to make it possible for anyone to have their own [Electrum](https://github.com/spesmilo/electrum) server, using [Electrs](https://github.com/romanz/electrs) and [Docker](https://www.docker.com/) the easy way
+
+## Quick introduction
+An Electrum wallet generally connects to a public server linked to a Bitcoin node to perform actions on the network.
+With your own electrum server connected to your own node, you become completely self-sovereign over your actions on the bitcoin network.
+
+## You need to have
+- [Bitcoin-node](https://github.com/bitcoin/bitcoin)
+- [Docker](https://www.docker.com/)
+- [Git](https://git-scm.com/)
 
 ## Runing
 Run: 
