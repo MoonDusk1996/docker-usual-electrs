@@ -32,10 +32,10 @@ Isso executará um script que irá baixar esse repositório e criará uma imagem
 docker run --rm -v <caminho_para_electrs_data>:/electrs electrs:latest
 ```
 
-Depois de ter certeza de que suas configurações estão corretas, você pode para de executar o container de testes com `Ctrl + c` e executar:
+Depois de ter certeza de que suas configurações estão corretas, você pode parar de executar o container de testes com `Ctrl + c` e iniciar o container que ficará ativo de fato com:
 
 ```
-docker run -v <caminho_para_electrs_data>:/electrs -p 127.0.0.1:50001:50001 -d --name electrum-server electrs:latest
+docker run -v <caminho_para_electrs_data>:/electrs -p 127.0.0.1:50001:50001 -d --restart=unless-stopped --name electrum-server electrs:latest
 ```
 Após isso seu contêiner estará em execução, mas pode levar algumas horas para ele sincronizar e indexar com seu nó de Bitcoin. Você pode ver o status do processo executando:
 
