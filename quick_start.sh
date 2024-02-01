@@ -10,8 +10,8 @@ if ! command -v docker &> /dev/null; then
     exit 1
 fi
 
-git clone https://github.com/MoonDusk1996/docker-usual-electrs.git docker-usual-electrs
-cd docker-usual-electrs
+git clone https://github.com/MoonDusk1996/docker_electrs.git docker_electrs
+cd docker_electrs
 
 docker build -t electrs:latest .
 
