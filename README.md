@@ -10,7 +10,7 @@
 </p>
 
 # Propósito
-A intenção deste repositório é possibilitar que qualquer pessoa tenha seu próprio servidor [Electrum](https://github.com/spesmilo/electrum), usando [Electrs](https://github.com/romanz/electrs ) e [Docker](https://www.docker.com/) da maneira rápida e fácil.
+A intenção deste repositório é possibilitar que qualquer pessoa tenha seu próprio servidor [Electrum](https://github.com/spesmilo/electrum), usando [Electrs](https://github.com/romanz/electrs ) e [Docker](https://www.docker.com/) de maneira rápida e fácil.
 
 ## Introdução rápida
 Uma carteira Electrum geralmente se conecta a um servidor público vinculado a um nó de Bitcoin para realizar ações na rede, com seu próprio servidor electrum conectado ao seu próprio nó, você acaba se tornando completamente auto-soberano sobre suas ações na rede Bitcoin.
