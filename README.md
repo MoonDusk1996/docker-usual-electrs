@@ -26,18 +26,20 @@ Execute:
 curl -sSL https://raw.githubusercontent.com/MoonDusk1996/docker_electrs/master/quick_start.sh | bash
 ```
 
-Isso executará um script que irá baixar esse repositório e criará uma imagem docker do electrs. Após terminar de criar a imagem, edite o arquivo de configuração em `/docker_electrs/electrs_data` (apontando para seu nó) e suba seu contêiner de testes executando:
+Isso irá baixar esse repositório no diretorio no qual você executou esse script e criará uma imagem docker do electrs. Após terminar de criar a imagem, edite o arquivo de configuração `electrs.conf` em `./docker_electrs/docker_electrs/electrs_data` . Você deverá editar os campos "auth", "daemon_rpc_addr" e daemon_p2p_addr" conforme seu nó Bitcoin, após editar, salve o arquivo e suba seu contêiner de testes executando o seguinte comando:
 
 ```
 docker run --rm -v <./caminho_para_electrs_data>:/electrs electrs:latest
 ```
 
-Depois de ter certeza de que suas configurações estão corretas, você pode parar de executar o container de testes com `Ctrl + c` e iniciar o container que ficará ativo de fato com:
+O comando acima subira o seu container de testes, se suas configurações em `electrs.conf` estiverem corretas nenhum erro será retornado, caso contrário seu container será parado instantaneamente.
+Depois de ter certeza de que suas configurações estão corretas, poderá parar de executar o container de testes com `Ctrl + c` e iniciar o container que ficará ativo de fato com:
 
 ```
 docker run -v <./caminho_para_electrs_data>:/electrs -p 127.0.0.1:50001:50001 -d --restart=unless-stopped --name electrum-server electrs:latest
 ```
-Após isso seu contêiner estará em execução, mas pode levar algumas horas para ele sincronizar e indexar com seu nó de Bitcoin. Você pode ver o status do processo executando:
+
+Após isso seu contêiner estará em execução, contudo pode ser que leve algumas horas para ele sincronizar completamente com seu nó de Bitcoin. Você pode ver o status do processo executando:
 
 ```
 docker logs -f electrum-server
